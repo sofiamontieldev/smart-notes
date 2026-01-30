@@ -1,0 +1,33 @@
+# Build and Dependency Folders
+target/
+build/
+out/
+bin/
+.mvn/wrapper/maven-wrapper.jar
+
+# IDEs (IntelliJ, Eclipse, VS Code)
+.idea/
+*.iml
+*.iws
+*.ipr
+.settings/
+.project
+.classpath
+.factorypath
+.springBeans
+.vscode/
+
+# Security & Environment (CRITICAL)
+.env
+.env.local
+.env.*.local
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+

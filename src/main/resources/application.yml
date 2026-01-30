@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: smart-notes
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/smart_notes
+    username: postgres
+    password: toor+*
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
