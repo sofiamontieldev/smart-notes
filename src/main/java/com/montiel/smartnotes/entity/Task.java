@@ -47,22 +47,22 @@ public class Task {
         private boolean completed;
         private Note note;
 
-        public Builder id(UUID id) {
+        public Builder setId(UUID id) {
             this.id = id;
             return this;
         }
 
-        public Builder description(String description) {
+        public Builder setDescription(String description) {
             this.description = description;
             return this;
         }
 
-        public Builder completed(boolean completed) {
+        public Builder isCompleted(boolean completed) {
             this.completed = completed;
             return this;
         }
 
-        public Builder note(Note note) {
+        public Builder setNote(Note note) {
             this.note = note;
             return this;
         }

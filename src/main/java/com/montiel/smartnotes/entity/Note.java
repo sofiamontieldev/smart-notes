@@ -6,6 +6,7 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -13,8 +14,7 @@ import java.util.UUID;
 @Table(name = "notes")
 @EntityListeners(AuditingEntityListener.class)
 @Getter @Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@NoArgsConstructor @AllArgsConstructor
 public class Note {
 
     @Id
@@ -33,30 +33,31 @@ public class Note {
     private LocalDateTime createdAt;
 
     @OneToMany(mappedBy = "note", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Task> tasks;
+    private List<Task> tasks = new ArrayList<>();
 
     private Note(Builder builder) {
-        this.id = builder.id;
         this.title = builder.title;
-        this.user = builder.build().user;
+        this.user = builder.user;
+        this.tasks = builder.tasks != null ? builder.tasks : new ArrayList<>();
     }
 
     public static class Builder {
-        private UUID id;
         private String title;
         private User user;
+        private List<Task> tasks;
 
-        public Builder id(UUID id) {
-            this.id = id;
-            return this;
-        }
-        public Builder title(String title) {
+        public Builder setTitle(String title) {
             this.title = title;
             return this;
         }
 
-        public Builder user(User user) {
+        public Builder setUser(User user) {
             this.user = user;
+            return this;
+        }
+
+        public Builder setTasks(List<Task> tasks) {
+            this.tasks = tasks;
             return this;
         }
 
