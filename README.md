@@ -62,7 +62,9 @@ without relying on hidden generated code for the core domain logic.
 
 * [x] Manual Builder Implementation
 
-* [ ] Repository Layer Implementation
+* [x] Repository Layer Implementation
+
+* [ ] <u>**Business Logic Layer - Services**</u> <-- *In Progress*
 
 * [ ] REST API Endpoints
 
