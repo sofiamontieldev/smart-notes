@@ -1,13 +1,12 @@
 package com.montiel.smartnotes.converter;
 
-import com.montiel.smartnotes.dto.TaskResponseDTO;
-import com.montiel.smartnotes.entity.Task;
+import com.montiel.smartnotes.dto.request.TaskRequestDTO;
+import com.montiel.smartnotes.model.entity.Task;
 
 public class TaskConverter {
 
-    public static TaskResponseDTO taskToTaskDTO(Task task) {
-
-        return new TaskResponseDTO(
+    public static TaskRequestDTO taskToTaskDTO(Task task) {
+        return new TaskRequestDTO(
                 task.getId(),
                 task.getDescription(),
                 task.isCompleted(),
@@ -15,12 +14,11 @@ public class TaskConverter {
         );
     }
 
-    public static Task taskDTOToTask(TaskResponseDTO taskDTO) {
-
-        return new Task.Builder()
-                .setId(taskDTO.taskId())
-                .setDescription(taskDTO.description())
-                .isCompleted(taskDTO.complete())
+    public static Task taskDTOToTask(TaskRequestDTO taskRequestDTO) {
+        return Task.builder()
+                .setId(taskRequestDTO.taskId())
+                .setDescription(taskRequestDTO.description())
+                .isCompleted(taskRequestDTO.complete())
                 .build();
     }
 }

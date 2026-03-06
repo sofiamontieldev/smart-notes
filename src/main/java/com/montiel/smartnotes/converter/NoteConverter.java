@@ -1,9 +1,8 @@
 package com.montiel.smartnotes.converter;
 
-import com.montiel.smartnotes.dto.NoteResponseDTO;
-import com.montiel.smartnotes.dto.TaskResponseDTO;
-import com.montiel.smartnotes.entity.Note;
-import com.montiel.smartnotes.entity.Task;
+import com.montiel.smartnotes.dto.response.NoteResponseDTO;
+import com.montiel.smartnotes.dto.request.TaskRequestDTO;
+import com.montiel.smartnotes.model.entity.Note;
 
 import java.util.List;
 
@@ -11,7 +10,7 @@ public class NoteConverter {
 
     public static NoteResponseDTO noteToNoteDTO(Note note) {
 
-        List<TaskResponseDTO> tasksDTO = (note.getTasks() == null)
+        List<TaskRequestDTO> tasksDTO = (note.getTasks() == null)
                 ? List.of()
                 : note.getTasks().stream()
                 .map(TaskConverter::taskToTaskDTO)

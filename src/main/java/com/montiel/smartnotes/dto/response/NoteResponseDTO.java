@@ -1,4 +1,6 @@
-package com.montiel.smartnotes.dto;
+package com.montiel.smartnotes.dto.response;
+
+import com.montiel.smartnotes.dto.request.TaskRequestDTO;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -9,5 +11,5 @@ public record NoteResponseDTO(
         String title,
         LocalDateTime createdAt,
         UUID userId,
-        List<TaskResponseDTO> tasks) {
+        List<TaskRequestDTO> tasks) {
 }

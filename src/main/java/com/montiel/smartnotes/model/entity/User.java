@@ -1,4 +1,4 @@
-package com.montiel.smartnotes.entity;
+package com.montiel.smartnotes.model.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;

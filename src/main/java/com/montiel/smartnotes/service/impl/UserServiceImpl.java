@@ -1,9 +1,9 @@
 package com.montiel.smartnotes.service.impl;
 
-import com.montiel.smartnotes.entity.User;
+import com.montiel.smartnotes.model.entity.User;
 import com.montiel.smartnotes.exception.MyValidationException;
 import com.montiel.smartnotes.repository.UserRepository;
-import com.montiel.smartnotes.service.UserService;
+import com.montiel.smartnotes.service.api.UserService;
 import io.micrometer.common.util.StringUtils;
 import org.springframework.stereotype.Service;
 

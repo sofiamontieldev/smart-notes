@@ -1,8 +1,8 @@
 package com.montiel.smartnotes.converter;
 
-import com.montiel.smartnotes.dto.NoteResponseDTO;
-import com.montiel.smartnotes.dto.UserResponseDTO;
-import com.montiel.smartnotes.entity.User;
+import com.montiel.smartnotes.dto.response.NoteResponseDTO;
+import com.montiel.smartnotes.dto.response.UserResponseDTO;
+import com.montiel.smartnotes.model.entity.User;
 
 import java.util.List;
 

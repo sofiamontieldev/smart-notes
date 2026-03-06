@@ -1,6 +1,6 @@
 package com.montiel.smartnotes.repository;
 
-import com.montiel.smartnotes.entity.Task;
+import com.montiel.smartnotes.model.entity.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
